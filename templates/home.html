@@ -1,0 +1,16 @@
+<html>
+<head><title>Iris Prediction</title></head>
+<body>
+    <h2>Iris Flower Prediction</h2>
+    <form method="POST" action="/predict">
+        <input name="sepal_length" placeholder="Sepal Length"><br>
+        <input name="sepal_width" placeholder="Sepal Width"><br>
+        <input name="petal_length" placeholder="Petal Length"><br>
+        <input name="petal_width" placeholder="Petal Width"><br>
+        <button type="submit">Predict</button>
+    </form>
+    {% if prediction %}
+        <h3>Result: {{ prediction }}</h3>
+    {% endif %}
+</body>
+</html>
